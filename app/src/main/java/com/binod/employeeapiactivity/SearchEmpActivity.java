@@ -62,9 +62,9 @@ public class SearchEmpActivity extends AppCompatActivity {
 
                 String content = "";
                 content += "ID: " + response.body().getId() + "\n";
-                content += "Name: " + response.body().getEmployee_name();
-                content += "Salary: " + response.body().getEmployee_salary();
-                content += "Age: " + response.body().getEmployee_age();
+                content += "Name: " + response.body().getEmployee_name() + "\n";
+                content += "Salary: " + response.body().getEmployee_salary() + "\n";
+                content += "Age: " + response.body().getEmployee_age() + "\n";
 
                 tvData.setText(content);
             }
