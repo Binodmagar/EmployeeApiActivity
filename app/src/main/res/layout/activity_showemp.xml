@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/etId"
+        android:id="@+id/tvIdR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/etNameR"
+        android:id="@+id/tvNameR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -26,10 +26,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etId" />
+        app:layout_constraintTop_toBottomOf="@+id/tvIdR" />
 
     <TextView
-        android:id="@+id/etSalaryR"
+        android:id="@+id/tvSalaryR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -37,10 +37,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNameR" />
+        app:layout_constraintTop_toBottomOf="@+id/tvNameR" />
 
     <TextView
-        android:id="@+id/etAgeR"
+        android:id="@+id/tvAgeR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -48,5 +48,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.093"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSalaryR" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSalaryR" />
 </androidx.constraintlayout.widget.ConstraintLayout>

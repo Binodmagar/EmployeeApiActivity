@@ -36,10 +36,11 @@ public class ShowEmpAdapter extends RecyclerView.Adapter<ShowEmpAdapter.ShowEmpV
     @Override
     public void onBindViewHolder(@NonNull ShowEmpViewHolder holder, int position) {
         Employee employee = employeeList.get(position);
-        holder.etId.setText(employee.getId());
-        holder.etNameR.setText(employee.getEmployee_name());
-        holder.etSalaryR.setText(employee.getEmployee_salary());
-        holder.etAgeR.setText(employee.getEmployee_age());
+        holder.tvIdR.setText("ID: " + Integer.toString(employee.getId()));
+        holder.tvNameR.setText("Name: " + employee.getEmployee_name());
+        holder.tvSalaryR.setText("Salary: " + Float.toString(employee.getEmployee_salary()));
+        holder.tvAgeR.setText("Age: " + Integer.toString(employee.getEmployee_age()));
+
     }
 
     @Override
@@ -48,16 +49,16 @@ public class ShowEmpAdapter extends RecyclerView.Adapter<ShowEmpAdapter.ShowEmpV
     }
 
     public class ShowEmpViewHolder extends RecyclerView.ViewHolder{
-        TextView etId, etNameR, etSalaryR, etAgeR;
+        TextView tvIdR, tvNameR, tvSalaryR, tvAgeR;
 
         public ShowEmpViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //binding
-            etId = itemView.findViewById(R.id.etId);
-            etNameR = itemView.findViewById(R.id.etNameR);
-            etSalaryR = itemView.findViewById(R.id.etSalary);
-            etAgeR = itemView.findViewById(R.id.etAge);
+            tvIdR = itemView.findViewById(R.id.tvIdR);
+            tvNameR = itemView.findViewById(R.id.tvNameR);
+            tvSalaryR = itemView.findViewById(R.id.tvSalaryR);
+            tvAgeR = itemView.findViewById(R.id.tvAgeR);
         }
     }
 }
