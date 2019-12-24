@@ -64,17 +64,17 @@ public class UpdateDeleteEmpActivity extends AppCompatActivity {
         });
     }
 
-    public void CreateInstance(){
-         retrofit = new Retrofit.Builder()
-                .baseUrl(URL.base_url)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-         employeeAPI = retrofit.create(EmployeeAPI.class);
-    }
+//    public void CreateInstance(){
+//         retrofit = new Retrofit.Builder()
+//                .baseUrl(URL.base_url)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//         employeeAPI = retrofit.create(EmployeeAPI.class);
+//    }
 
     public void loadData(){
-        CreateInstance();
+        EmployeeAPI employeeAPI = URL.CreateInstance().create(EmployeeAPI.class);
         Call<Employee> employeeCall = employeeAPI.getEmployeeByID(Integer.parseInt(etSearchEmpU.getText().toString()));
 
         employeeCall.enqueue(new Callback<Employee>() {
@@ -95,7 +95,7 @@ public class UpdateDeleteEmpActivity extends AppCompatActivity {
     }
 
     public void updateEmployee(){
-        CreateInstance();
+        EmployeeAPI employeeAPI = URL.CreateInstance().create(EmployeeAPI.class);
         EmployeeCUD employeeCUD = new EmployeeCUD(
                 etNameU.getText().toString(),
                 Float.parseFloat(etSalaryU.getText().toString()),
@@ -118,7 +118,7 @@ public class UpdateDeleteEmpActivity extends AppCompatActivity {
     }
 
     public void deleteEmployee(){
-        CreateInstance();
+        EmployeeAPI employeeAPI = URL.CreateInstance().create(EmployeeAPI.class);
         Call<Void> voidCall = employeeAPI.deleteEmployee(Integer.parseInt(etSearchEmpU.getText().toString()));
 
         voidCall.enqueue(new Callback<Void>() {
